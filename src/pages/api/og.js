@@ -22,12 +22,20 @@ export default function handler(req) {
           fontSize: 40,
           fontWeight: 'bold',
           color: 'white',
-          background: `url(${imageUrl}) no-repeat center center`,
-          backgroundSize: 'cover',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
+        <img
+          src={imageUrl}
+          alt="Background"
+          style={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
+        />
         <div
           style={{
             position: 'absolute',
@@ -37,6 +45,8 @@ export default function handler(req) {
             padding: '20px',
             backgroundColor: 'rgba(0, 0, 0, 0.5)',
             borderRadius: '10px',
+            color: 'white',
+            textAlign: 'center',
           }}
         >
           {title}
