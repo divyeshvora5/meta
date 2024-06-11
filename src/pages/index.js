@@ -11,6 +11,7 @@ const description = 'Your Page Description';
 const imgUrl = 'https://d17ha18jyelis7.cloudfront.net/collections/originals/16395541-68bd-4f66-a581-6528fb9ffbf4-1705050528582';
 const ogImageUrl = `${DOMAIN}/api/og?title=${encodeURIComponent(title)}&imageUrl=${encodeURIComponent(imgUrl)}`;
 
+console.log("🚀 ~ ogImageUrl:", ogImageUrl)
 export default function Home() {
   return (
     <>
