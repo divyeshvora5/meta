@@ -11,7 +11,7 @@ export default function handler(req) {
     console.log("🚀 ~ handler ~ searchParams:", searchParams);
     const title = searchParams.get("title") || "Default Title";
     const imageUrl =
-        searchParams.get("imageUrl") ||
+        searchParams.get("amp;imageUrl") ||
         "https://your-default-image-url.com/default-image.jpg";
 
     return new ImageResponse(
