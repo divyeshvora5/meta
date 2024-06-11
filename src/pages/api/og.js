@@ -49,7 +49,7 @@ export default function handler(req) {
                         transform: "translate(-50%, -50%)",
                         padding: "20px",
                         borderRadius: "10px",
-                        color: "white",
+                        color: "black",
                         fontSize: "50px",
                         fontWeight: "bold",
                         textAlign: "center",
