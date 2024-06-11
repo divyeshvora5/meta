@@ -9,8 +9,7 @@ export const config = {
 export default function handler(req) {
   const { searchParams } = new URL(req.url);
   const title = searchParams.get('title') || 'Default Title';
-  const description = searchParams.get('description') || 'Default Description';
-  const imageUrl = searchParams.get('imageUrl') || 'https://your-default-image-url.com';
+  const imageUrl = searchParams.get('imageUrl') || 'https://your-default-image-url.com/default-image.jpg';
 
   return new ImageResponse(
     (
@@ -19,15 +18,29 @@ export default function handler(req) {
           display: 'flex',
           height: '100%',
           width: '100%',
-          alignItems: 'center',
-          justifyContent: 'center',
+          position: 'relative',
           fontSize: 40,
           fontWeight: 'bold',
           color: 'white',
-          background: 'black',
+          background: `url(${imageUrl}) no-repeat center center`,
+          backgroundSize: 'cover',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
-        {title}
+        <div
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            padding: '20px',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            borderRadius: '10px',
+          }}
+        >
+          {title}
+        </div>
       </div>
     ),
     {

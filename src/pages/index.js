@@ -5,11 +5,11 @@ import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const DOMAIN = 'https://meta-psi-five.vercel.app/';
-
+const DOMAIN = 'https://your-domain.com'; // Replace with your domain
 const title = 'BITMATIC ART';
 const description = 'Your Page Description';
 const imgUrl = 'https://d17ha18jyelis7.cloudfront.net/collections/originals/16395541-68bd-4f66-a581-6528fb9ffbf4-1705050528582';
+const ogImageUrl = `${DOMAIN}/api/og?title=${encodeURIComponent(title)}&imageUrl=${encodeURIComponent(imgUrl)}`;
 
 export default function Home() {
   return (
@@ -21,12 +21,12 @@ export default function Home() {
         <meta property="og:url" content={DOMAIN} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={imgUrl} />
+        <meta property="og:image" content={ogImageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={DOMAIN} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={imgUrl} />
+        <meta property="twitter:image" content={ogImageUrl} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
