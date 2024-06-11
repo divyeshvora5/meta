@@ -29,6 +29,10 @@ export default function handler(req) {
           alt="Background"
           style={{
             position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
             width: '100%',
             height: '100%',
             objectFit: 'cover',
@@ -41,7 +45,6 @@ export default function handler(req) {
             left: '50%',
             transform: 'translate(-50%, -50%)',
             padding: '20px',
-            backgroundColor: 'rgba(0, 0, 0, 0.7)', // Darker background for better contrast
             borderRadius: '10px',
             color: 'white',
             fontSize: '50px',
@@ -53,10 +56,6 @@ export default function handler(req) {
           {title}
         </div>
       </div>
-    ),
-    {
-      width: 1200,
-      height: 630,
-    }
+    )
   );
 }
