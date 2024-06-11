@@ -64,6 +64,10 @@ export default function handler(req) {
                     {title}
                 </div>
             </div>
-        )
+        ),
+        {
+            width: 600,
+            height: 615,
+        }
     );
 }
