@@ -8,11 +8,15 @@ export const config = {
 
 export default function handler(req) {
     const { searchParams } = new URL(req.url);
+    const DOMAIN = "https://meta-psi-five.vercel.app";
     console.log("🚀 ~ handler ~ searchParams:", searchParams);
-    const title = searchParams.get("title") || "Default Title";
-    const imageUrl =
-        searchParams.get("amp;imageUrl") ||
-        "https://your-default-image-url.com/default-image.jpg";
+    const hasTitle = searchParams?.has("title");
+    const hasImageUrl = searchParams?.has("amp;imageUrl");
+    const title = hasTitle ? searchParams?.get("title") : "New collection";
+
+    const imageUrl = hasImageUrl
+        ? searchParams?.get("amp;imageUrl")
+        : `${DOMAIN}/public/Sample-png-image-200kb.png`;
 
     return new ImageResponse(
         (
