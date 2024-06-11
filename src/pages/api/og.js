@@ -41,6 +41,7 @@ export default function handler(req) {
             left: '50%',
             transform: 'translate(-50%, -50%)',
             padding: '20px',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // Darker background for better contrast
             borderRadius: '10px',
             color: 'white',
             fontSize: '50px',

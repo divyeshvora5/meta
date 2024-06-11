@@ -5,7 +5,7 @@ import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const DOMAIN = 'https://your-domain.com'; // Replace with your domain
+const DOMAIN = 'https://meta-psi-five.vercel.app/'; // Replace with your domain
 const title = 'BITMATIC ART';
 const description = 'Your Page Description';
 const imgUrl = 'https://d17ha18jyelis7.cloudfront.net/collections/originals/16395541-68bd-4f66-a581-6528fb9ffbf4-1705050528582';
