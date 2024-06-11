@@ -5,29 +5,30 @@ import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const DOMAIN = 'https://meta-psi-five.vercel.app/'
+const DOMAIN = 'https://meta-psi-five.vercel.app/';
 
 const title = 'BITMATIC ART';
+const description = 'Your Page Description';
 const imgUrl = 'https://d17ha18jyelis7.cloudfront.net/collections/originals/16395541-68bd-4f66-a581-6528fb9ffbf4-1705050528582';
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={DOMAIN} />
         <meta property="og:title" content={title} />
-        <meta property="og:description" content="Your Page Description" />
+        <meta property="og:description" content={description} />
         <meta property="og:image" content={imgUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={DOMAIN} />
         <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content="Your Page Description" />
+        <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={imgUrl} />
-      </Head>
-
         <link rel="icon" href="/favicon.ico" />
+      </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.description}>
           <p>
