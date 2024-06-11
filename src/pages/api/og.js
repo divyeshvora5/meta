@@ -19,11 +19,9 @@ export default function handler(req) {
           height: '100%',
           width: '100%',
           position: 'relative',
-          fontSize: 40,
-          fontWeight: 'bold',
-          color: 'white',
           alignItems: 'center',
           justifyContent: 'center',
+          fontFamily: 'Arial, sans-serif',
         }}
       >
         <img
@@ -43,10 +41,12 @@ export default function handler(req) {
             left: '50%',
             transform: 'translate(-50%, -50%)',
             padding: '20px',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
             borderRadius: '10px',
             color: 'white',
+            fontSize: '50px',
+            fontWeight: 'bold',
             textAlign: 'center',
+            whiteSpace: 'pre-wrap',
           }}
         >
           {title}
