@@ -15,9 +15,10 @@ export default function handler(req) {
     const title = hasTitle ? searchParams?.get("title") : "New collection";
 
     const imageUrl = hasImageUrl
-        ? searchParams?.get("amp;imageUrl")
-        : `${DOMAIN}/public/Sample-png-image-200kb.png`;
-
+    ? searchParams?.get("amp;imageUrl")
+    : `${DOMAIN}/public/Sample-png-image-200kb.png`;
+    
+    console.log("🚀 ~ handler ~ imageUrl:", imageUrl)
     return new ImageResponse(
         (
             <div
@@ -66,8 +67,8 @@ export default function handler(req) {
             </div>
         ),
         {
-            width: 600,
-            height: 615,
+            width: 300,
+            height: 158,
         }
     );
 }
