@@ -41,7 +41,7 @@ export default async function handler(req) {
           alt="Vercel"
           width={255}
           height={225}
-          src="https://d17ha18jyelis7.cloudfront.net/collections/banners/0f62c3d4-d350-43fc-8f80-451cba0dd6a8-1707459809309"
+          src={hasImageUrl}
           style={{ margin: '0 75px' }}
         />
         <div
