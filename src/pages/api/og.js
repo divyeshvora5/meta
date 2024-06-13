@@ -1,5 +1,3 @@
-// pages/api/og.js
-
 import { ImageResponse } from "@vercel/og";
 
 export const config = {
@@ -7,22 +5,17 @@ export const config = {
 };
 
 export default function handler(req) {
-    // const { searchParams } = new URL(req.url);
-    // const DOMAIN = "https://meta-psi-five.vercel.app";
-    // const hasTitle = searchParams?.has("title");
-    // const hasImageUrl = searchParams?.has("imageUrl");
-    // const title = hasTitle ? searchParams?.get("title") : "New collection";
-
-    // const imageUrl = hasImageUrl
-    //     ? searchParams?.get("imageUrl")
-    //     : `${DOMAIN}/public/Sample-png-image-200kb.png`;
-
-    const title = "#BITMATIC ART";
-        const logoUrl = "https://dev.tesseractx.com/images/logo-light.svg";
-        const imageUrl =
-            "https://hextoymedia.s3.us-east-1.amazonaws.com/collections/lows/86204875-32e0-4e58-a702-0f55a1befffa-1718267220803";
-        const coverUrl =
-            "https://hextoymedia.s3.us-east-1.amazonaws.com/collections/banners/273488de-5f34-4b2f-a621-d352d6e7a4f6-1718222813018";
+    const { searchParams } = new URL(req.url);
+    const DOMAIN = "https://meta-psi-five.vercel.app";
+    const hasTitle = searchParams.has("title");
+    const hasImageUrl = searchParams.has("imageUrl");
+    const title = hasTitle ? searchParams.get("title") : "#BITMATIC ART";
+    const imageUrl = hasImageUrl
+        ? searchParams.get("imageUrl")
+        : "https://hextoymedia.s3.us-east-1.amazonaws.com/collections/lows/86204875-32e0-4e58-a702-0f55a1befffa-1718267220803";
+    const coverUrl =
+        "https://hextoymedia.s3.us-east-1.amazonaws.com/collections/banners/273488de-5f34-4b2f-a621-d352d6e7a4f6-1718222813018";
+    const logoUrl = "https://dev.tesseractx.com/images/logo-light.svg";
 
     return new ImageResponse(
         (
