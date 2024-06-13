@@ -28,7 +28,7 @@ export default async function handler() {
           alt="Vercel"
           width={255}
           height={225}
-          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTE2IiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTU3LjUgMEwxMTUgMTAwSDBMNTcuNSAweiIgLz48L3N2Zz4="
+          src="https://d17ha18jyelis7.cloudfront.net/collections/banners/0f62c3d4-d350-43fc-8f80-451cba0dd6a8-1707459809309"
           style={{ margin: '0 75px' }}
         />
         <div
@@ -38,7 +38,7 @@ export default async function handler() {
             lineHeight: 1.8,
           }}
         >
-          Vercel Edge Network
+          Test
         </div>
       </div>
     ),
