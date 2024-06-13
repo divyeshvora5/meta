@@ -8,16 +8,11 @@ const inter = Inter({ subsets: ["latin"] });
 const DOMAIN = "https://meta-psi-five.vercel.app"; // Replace with your domain
 const title = "BITMATIC ART";
 const description = "Your Page Description";
-// const imgUrl = 'https://d17ha18jyelis7.cloudfront.net/collections/originals/16395541-68bd-4f66-a581-6528fb9ffbf4-1705050528582';
-const imgUrl =
-    "https://hextoymedia.s3.us-east-1.amazonaws.com/users/lows/31b26cf4-f0fb-453a-b9c0-f5b214151782-1716539450001";
-// const imgUrl =
-//     "https://hextoymedia.s3.us-east-1.amazonaws.com/users/mediums/59c87693-2fc0-40c4-8681-800397798116-1716539450001";
-const ogImageUrl = `${DOMAIN}/api/og?title=${encodeURIComponent(
-    title
-)}&imageUrl=${encodeURIComponent(imgUrl)}`;
+const imgUrl = "https://hextoymedia.s3.us-east-1.amazonaws.com/users/lows/31b26cf4-f0fb-453a-b9c0-f5b214151782-1716539450001";
+const ogImageUrl = `${DOMAIN}/api/og?title=${encodeURIComponent(title)}&imageUrl=${encodeURIComponent(imgUrl)}`;
 
 console.log("🚀 ~ ogImageUrl:", ogImageUrl);
+
 export default function Home() {
     return (
         <>

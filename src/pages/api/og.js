@@ -1,5 +1,3 @@
-// pages/api/og.js
-
 import { ImageResponse } from "@vercel/og";
 
 export const config = {
@@ -10,13 +8,13 @@ export default function handler(req) {
     const { searchParams } = new URL(req.url);
     const DOMAIN = "https://meta-psi-five.vercel.app";
     console.log("🚀 ~ handler ~ searchParams:", searchParams);
-    const hasTitle = searchParams?.has("title");
-    const hasImageUrl = searchParams?.has("amp;imageUrl");
-    const title = hasTitle ? searchParams?.get("title") : "New collection";
+    const hasTitle = searchParams.has("title");
+    const hasImageUrl = searchParams.has("imageUrl");
+    const title = hasTitle ? searchParams.get("title") : "New collection";
 
     const imageUrl = hasImageUrl
-    ? searchParams?.get("amp;imageUrl")
-    : `${DOMAIN}/public/Sample-png-image-200kb.png`;
+        ? searchParams.get("imageUrl")
+        : `${DOMAIN}/public/Sample-png-image-200kb.png`;
     
     console.log("🚀 ~ handler ~ imageUrl:", imageUrl)
     return new ImageResponse(
@@ -46,29 +44,29 @@ export default function handler(req) {
                         objectFit: "cover",
                     }}
                 />
-                {/* <div
-                    // style={{
-                    //     position: "absolute",
-                    //     top: "50%",
-                    //     left: "50%",
-                    //     transform: "translate(-50%, -50%)",
-                    //     padding: "20px",
-                    //     borderRadius: "10px",
-                    //     color: "black",
-                    //     fontSize: "50px",
-                    //     fontWeight: "bold",
-                    //     textAlign: "center",
-                    //     whiteSpace: "pre-wrap",
-                    //     zIndex: 1,
-                    // }}
+                <div
+                    style={{
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        padding: "20px",
+                        borderRadius: "10px",
+                        color: "black",
+                        fontSize: "50px",
+                        fontWeight: "bold",
+                        textAlign: "center",
+                        whiteSpace: "pre-wrap",
+                        zIndex: 1,
+                    }}
                 >
                     {title}
-                </div> */}
+                </div>
             </div>
         ),
-        // {
-        //     width: 300,
-        //     height: 158,
-        // }
+        {
+            width: 1200,
+            height: 630,
+        }
     );
 }
