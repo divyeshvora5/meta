@@ -25,7 +25,7 @@ export default function handler(req) {
                     width: "1200px",
                     height: "630px",
                     alignItems: "center",
-                    justifyContent: "end",
+                    justifyContent: "flex-end",
                     flexDirection: "column",
                     position: "relative",
                 }}
