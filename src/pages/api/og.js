@@ -19,7 +19,7 @@ export default async function handler(req) {
   const title = hasTitle ? searchParams?.get("title") : "New collection";
 
   const imageUrl = hasImageUrl
-      ? searchParams?.get("amp;imageUrl")
+      ? searchParams?.get("imageUrl")
       : `${DOMAIN}/public/Sample-png-image-200kb.png`;
   return new ImageResponse(
     (
@@ -44,7 +44,7 @@ export default async function handler(req) {
           alt="Vercel"
           width={255}
           height={225}
-          src={hasImageUrl}
+          src={imageUrl}
           style={{ margin: '0 75px' }}
         />
         <div
@@ -54,7 +54,7 @@ export default async function handler(req) {
             lineHeight: 1.8,
           }}
         >
-          Test
+          {title}
         </div>
       </div>
     ),
