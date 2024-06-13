@@ -31,7 +31,7 @@ export default function Home() {
             // `VERCEL_URL` environment variable to get the deployment’s URL.
             // More info:
             // https://vercel.com/docs/concepts/projects/environment-variables
-            `${DOMAIN}/api/og`
+           ogImageUrl
           }
         />
         <link rel="icon" href="/favicon.ico" />
