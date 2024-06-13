@@ -10,9 +10,7 @@ const title = 'BITMATIC ART';
 const description = 'Your Page Description';
 // const imgUrl = 'https://d17ha18jyelis7.cloudfront.net/collections/originals/16395541-68bd-4f66-a581-6528fb9ffbf4-1705050528582';
 const imgUrl = 'https://d17ha18jyelis7.cloudfront.net/collections/banners/0f62c3d4-d350-43fc-8f80-451cba0dd6a8-1707459809309';
-const ogImageUrl =`${DOMAIN}/api/og?title=${encodeURIComponent(
-    title
-)}&imageUrl=${encodeURIComponent(imgUrl)}`;
+const ogImageUrl = `${DOMAIN}/api/og?title=${encodeURIComponent(title)}&imageUrl=${encodeURIComponent(imgUrl)}`;
 
 
 
@@ -22,18 +20,17 @@ export default function Home() {
     <>
       <Head>
         <title>{title}</title>
-        <meta name="og:title" content="Vercel Edge Network" />
-        <meta name="og:description" content="Vercel Edge Network" />
-        <meta
-          name="og:image"
-          content={
-            // Because OG images must have a absolute URL, we use the
-            // `VERCEL_URL` environment variable to get the deployment’s URL.
-            // More info:
-            // https://vercel.com/docs/concepts/projects/environment-variables
-           ogImageUrl
-          }
-        />
+        <meta name="description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={DOMAIN} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={DOMAIN} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={ogImageUrl} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
