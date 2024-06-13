@@ -11,6 +11,7 @@ export default async function handler(req) {
   const { searchParams } = new URL(req.url);
 
   console.log('searchParams.get()', searchParams.get('title'))
+  console.log('searchParams?.get("imageUrl")', searchParams?.get("imageUrl"))
   const DOMAIN = "https://meta-psi-five.vercel.app";
   console.log("🚀 ~ handler ~ searchParams:", searchParams);
   const hasTitle = searchParams?.has("title");
