@@ -52,6 +52,7 @@ export default function handler(req) {
                         height: "100%",
                         backgroundColor: "rgba(255, 255, 255, 0.3)",
                         zIndex: 0,
+                        display: "flex",
                     }}
                 ></div>
                 <div
@@ -60,6 +61,7 @@ export default function handler(req) {
                         top: 20,
                         left: 20,
                         zIndex: 1,
+                        display: "flex",
                     }}
                 >
                     <img src={logoUrl} width="400" />
