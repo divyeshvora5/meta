@@ -7,6 +7,8 @@ export const config = {
 };
 
 export default function handler(req) {
+
+  console.log('req', req)
     const { searchParams } = new URL(req.url);
     const DOMAIN = "https://meta-psi-five.vercel.app";
     console.log("🚀 ~ handler ~ searchParams:", searchParams);
