@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 const DOMAIN = 'https://meta-psi-five.vercel.app'; // Replace with your domain
 const title = 'BITMATIC ART';
 const description = 'Your Page Description';
-// const imgUrl = 'https://d17ha18jyelis7.cloudfront.net/collections/originals/16395541-68bd-4f66-a581-6528fb9ffbf4-1705050528582';
-const imgUrl = 'https://d17ha18jyelis7.cloudfront.net/collections/banners/0f62c3d4-d350-43fc-8f80-451cba0dd6a8-1707459809309';
+const imgUrl = 'https://d17ha18jyelis7.cloudfront.net/collections/originals/16395541-68bd-4f66-a581-6528fb9ffbf4-1705050528582';
+// const imgUrl = 'https://d17ha18jyelis7.cloudfront.net/collections/banners/0f62c3d4-d350-43fc-8f80-451cba0dd6a8-1707459809309';
 const ogImageUrl = `${DOMAIN}/api/og?title=${encodeURIComponent(title)}&imageUrl=${encodeURIComponent(imgUrl)}`;
 
 
