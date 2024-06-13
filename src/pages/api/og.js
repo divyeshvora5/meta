@@ -4,7 +4,20 @@ export const config = {
   runtime: 'edge',
 }
 
-export default async function handler() {
+export default async function handler(req) {
+
+  console.log('req', re.nextUrl)
+
+  const { searchParams } = new URL(req.url);
+  const DOMAIN = "https://meta-psi-five.vercel.app";
+  console.log("🚀 ~ handler ~ searchParams:", searchParams);
+  const hasTitle = searchParams?.has("title");
+  const hasImageUrl = searchParams?.has("amp;imageUrl");
+  const title = hasTitle ? searchParams?.get("title") : "New collection";
+
+  const imageUrl = hasImageUrl
+      ? searchParams?.get("amp;imageUrl")
+      : `${DOMAIN}/public/Sample-png-image-200kb.png`;
   return new ImageResponse(
     (
       <div
