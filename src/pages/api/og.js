@@ -6,10 +6,10 @@ export const config = {
 
 export default async function handler(req) {
 
-  console.log('req.query', req.query)
+  console.log('req.query', req.href)
   console.log('req nextUrl', req.searchParams);
 
-  const { searchParams } = new URL(req.url);
+  const { searchParams } = new URL(req.href);
   const DOMAIN = "https://meta-psi-five.vercel.app";
   console.log("🚀 ~ handler ~ searchParams:", searchParams);
   const hasTitle = searchParams?.has("title");
