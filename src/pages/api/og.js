@@ -8,7 +8,7 @@ export default async function handler(req) {
 
   console.log('req nextUrl', req);
 
-  const { searchParams } = new URL(req.URL);
+  const { searchParams } = new URL(req.url);
 
   console.log('searchParams.get()', searchParams.get('title'))
   const DOMAIN = "https://meta-psi-five.vercel.app";
