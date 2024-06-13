@@ -14,7 +14,6 @@ const ogImageUrl = `${DOMAIN}/api/og?title=${encodeURIComponent(title)}&imageUrl
 
 
 
-console.log("🚀 ~ ogImageUrl:", ogImageUrl)
 export default function Home() {
   return (
     <>
