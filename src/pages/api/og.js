@@ -8,17 +8,17 @@ export const config = {
 
 export default function handler(req) {
 
-  console.log('req', new URL(req.url))
-    const { searchParams } = new URL(req.url);
-    const DOMAIN = "https://meta-psi-five.vercel.app";
-    console.log("🚀 ~ handler ~ searchParams:", searchParams);
-    const hasTitle = searchParams?.has("title");
-    const hasImageUrl = searchParams?.has("amp;imageUrl");
-    const title = hasTitle ? searchParams?.get("title") : "New collection";
+  // console.log('req', new URL(req.url))
+  //   const { searchParams } = new URL(req.url);
+  //   const DOMAIN = "https://meta-psi-five.vercel.app";
+  //   console.log("🚀 ~ handler ~ searchParams:", searchParams);
+  //   const hasTitle = searchParams?.has("title");
+  //   const hasImageUrl = searchParams?.has("amp;imageUrl");
+  //   const title = hasTitle ? searchParams?.get("title") : "New collection";
 
-    const imageUrl = hasImageUrl
-        ? searchParams?.get("amp;imageUrl")
-        : `${DOMAIN}/public/Sample-png-image-200kb.png`;
+  //   const imageUrl = hasImageUrl
+  //       ? searchParams?.get("amp;imageUrl")
+  //       : `${DOMAIN}/public/Sample-png-image-200kb.png`;
 
     return new ImageResponse(
         (
@@ -34,7 +34,7 @@ export default function handler(req) {
                 }}
             >
                 <img
-                    src={imageUrl}
+                    src={'https://d17ha18jyelis7.cloudfront.net/collections/banners/0f62c3d4-d350-43fc-8f80-451cba0dd6a8-1707459809309'}
                     alt="Background"
                     style={{
                         position: "absolute",
@@ -63,7 +63,7 @@ export default function handler(req) {
                         zIndex: 1,
                     }}
                 >
-                    {title}
+                    {'title'}
                 </div>
             </div>
         ),
